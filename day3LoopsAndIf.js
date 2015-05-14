@@ -4,7 +4,7 @@
   //     <script type="text/javascript" src="day2Arrays.js"></script>
   // What the browser is doing is going off and loading/executing them in the order we give these files. 
     // So first it's going to go through and load up the day1Objects.js file, and execute all the code we've written in there. 
-    // Then, after we've already fun all of day1Objects.js, it's going to go through and run day2Arrays.js, with all the results from day1Objects.js available to us since it's already been run!
+    // Then, after we've already run all of day1Objects.js, it's going to go through and run day2Arrays.js, with all the results from day1Objects.js available to us since it's already been run!
     // You can roughly think of this as if we just copied and pasted the code from these two files into the same file, in the order that we gave the file names. 
   // Let's go throguh and duplicate one of these lines, changing the name of the file to day3LoopsAndIf.js.
   // Now just make sure that your day3LoopsAndIf.js file is saved in the same location as your other two .js files, and you should be good to go!
@@ -136,6 +136,16 @@ var obj = {
   // == YOU SHOULD NEVER USE THIS. Seriously, save yourself some serious heartache and just never use this. Also, other programmers will sometimes judge you for using ==. So really, just don't use it. 
   // = This is for assignment. When you use the single equals, you are setting the thing on the left side of the operator equal to the thing on the right side of the operator. 
     // x = 'I totally understand assignments!' means that we are overwriting any value that x had previously and setting x equal to the string 'I totally understand assignments!'. Play around with this a bit if you're curious! Curiosity is a wonderful trait in engineers :)
+  // Bonus Round: Plus Equals += 
+    // Let's show you an example. 
+    var plusEqualsVar = 5;
+    plusEqualsVar += 10;
+    // console.log('plusEqualsVar after += 10 is:',plusEqualsVar);
+    // What += does is exacly the same as if you had typed 
+    var assignedVar = 5;
+    assignedVar = assignedVar = 10;
+    // console.log('assignedVar after assignedVar = assignedVar + 10 is:',assignedVar);
+
 
 // Arrays extra credit: 
 // Let's revisit this concept that i is just a number. What if we wanted to iterate through an array backwards? 
