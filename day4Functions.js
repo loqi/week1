@@ -1,13 +1,3 @@
-//passing in values as arguments. console.log the parameter inside the function to see that it's just a variable set equal to whatever argument you send in. 
-// Now change the parameter name. Console.log the new parameter name. 
-// A function is a block of code that exists in it's own little world. It will go off and do a bunch of work for you, but the outside world doesn't know about this until we get to the return statement. The return statement is the only thing that gets directly communicated from inside the function body to the outside world. Obviously, side effect statements work differently. We'll get to those in a few minutes. Ignoring side effects, the value that is returned is the only value that gets communicated back out to the rest of the code. 
-// Return an object. Create mysticalAnimalMaker, and the parameters we pass in are going to be the name and superpower. 
-// The return statement totally stops all code execution. Put a console.log after the return statement, just to see that it never gets called!
-// Functions are just blocks of code that you've written but haven't been run yet. 
-// Lots of returns vs. side effects. 
-// Lots of invoking vs. calling. Be super strict on this. And relate it back to functional programming later on. 
-  // Function definition vs. results of function invocation
-
 // Welcome to functions! 
 // First things first, make sure to add this file to your index.html file, just like you did yesterday. 
 // Functions are an incredibly important part of JS. They let us follow the programming best practice of being DRY (Don't Repeat Yourself). Whenever we start typing the same thing multiple times, we can probably put that inside a function, making our lives easier, and our code easier to read. 
@@ -91,6 +81,7 @@
       }
       */
     // Notice how each animals will have a createdBy property that will be the same for all of them. But then the rest of the properties are set equal to the inputs the user gives us. 
+
 
 // Congrats, you now have a bunch of practice with functions!
 // Let's review for a minute:
