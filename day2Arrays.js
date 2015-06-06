@@ -349,20 +349,6 @@
 //   the standard length-interrogation expression is `myArray.length`, not `myArray.length()`.
 //   Arrays are themselves objects. That's how it's possible for an array to find data
 //   by both index (like 0) and key (like `length`).
-//
-// A nested object (an object whose reference appears as the value of a property of another
-// object) is a great way to associate a bunch of formatted data as your one value in your
-// key-value store. For example, imagine we have an object called rolodex where each key is
-// expected to be a person's name and each value is expected to be an object representing
-// contact information. These nested objects (roloxed card) are keyed on names of fields,
-// such as 'middle_name' or 'home_phone', and the values are expected to be strings with the
-// contact data, such as 'Telegraph Academy' or 'bianca@example.edu'. Then, if the keys are
-// compatible with dot notation, an expression like `rolodex.bianca.business_street_address`
-// resolves during interpreter execution to a string like "1600 Shattuck Avenue". If the
-// property names (keys) don't play well with JS code, or the keys are stored and manipulated
-// via variables, we would use bracket notation instead, like
-// `rolodex[myFavoriteRolodexKey]['Suite #']` resolving to a string value at runtime "106"
-// or perhaps a numeric value 106.
 
 
 // Yesterday and today we learned how to access individual values from arrays and objects.
