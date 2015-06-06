@@ -34,39 +34,45 @@
 // The roll of the dice tells you how far to move -- not how many squares to touch inculing
 // the one you are already sitting on. If it were possible to roll a one, it would mean move
 // forward by one square, not "stay where you are". Rolling a zero would mean don't move.
-
-// An array can do anything an object can do plus one extra trick. They have an array data
-// store deep within them, which is accessible by indexing a non-fraction-bearing, non-negative,
-// numeric values. 
-
-
-
-The array store can grow or shrink. Here's some code.
-//              var arr = [];  arr[1000000] = 0;
-//      This code causes the array store to grow to length 1000001, even though nearly all elements are
-//      empty. What we gain from this behavior is the ability to look up any array element via fast
-//      integer arithemtic behind the scenes, rather than significantly slower, but still pretty fast
-//      hash function arithmetic used by object key lookup. For this reason arrays are usually a bad choice
-//      for sparsely populated data. All the blank elements take up space, just to keep the elements with
-//      data at the correct location. Arrays are great for contiguous collections that don't need keys
-//      but do need random-access behavior, meaning you can get at something in the middle if you know
-//      it's position (index) without having to traverse other elements. You can jump right to it if you
-//      know which one it is by index (distance from the front).
+//
+// An array can do anything an object can do plus one extra trick. An array has an index-value
+// data  store deep within it, which is accessible by indexing a non-fraction-bearing,
+// non-negative, numeric value. The array store can grow or shrink.
+//
+// Consider this code, `var arr = [];  arr[1000000] = 0;` This code causes an empty array object
+// to be created and its reference assigned to a variable `arr`. Then the empty array store is
+// widened to accomodate exactly 1,000,001 elements (indexed 0 through 100000). Then the numeric
+// value `0` is written to the last element. `arr.length` now contains the number `1000001`.
+// After this code executes, nearly every element in the array's index-value store is undefined,
+// but it still takes up a big block of contiguous memory for all those data elements. What we
+// gain from this behavior is the ability to look up any array element via ultra-fast integer
+// arithemtic behind the scenes. rather than significantly slower, but still pretty fast hash
+// function arithmetic used by object key lookup. For this reason arrays are usually a bad choice
+// for sparsely populated data. All the blank elements take up space, just to keep the elements
+// with the data in the correct memory location. Arrays are great for contiguous collections that
+// don't need keys but do need random-access lookup by numerical position, meaning the
+// interpreter can get at something by jumping right to it in the middle of the array, without
+// having to paw through anything else to find it. When you access an array element like this
+// `myVar = variable_pointing_to_an_array[numeric_index_of_one_element_of_that_array]`, it's
+// barely more work for the interpreter than accessing a variable directly, like this,
+// `myVar = variable_conatining_a_value_that_could_instead_be_in_an_array_element;`
+//
 // An arrays is actually a special kinds of object. By that, we mean arrays have properties of
 // their own. One of the most important of these is the length property, which can be accessed
-// with dot notation like so, `name_of_a_variable_pointing_to_an_array.length`. This property
-// always returns a non-negative "integer" number. JavaScript has no integer data type. The
-// length property always returns a floating point number that always happens to have no
-// fractional portion. You can rely on it being 0.0 or 1.0 or 2.0 or 3.0 and so on. Never
-// negative, never fractional.
+// with dot notation like so, `variable_pointing_to_an_array.length`. This property always
+// returns a non-negative "integer" number. JavaScript has no integer data type. The length
+// property always returns a floating point number that always happens to have no fractional
+// portion. You can rely on it being 0.0 or 1.0 or 2.0 or 3.0 and so on.
+// Never negative, never fractional.
 //
-// Arrays come with built-in methods. Methods are properties that point to a function. On day 4,
-// we go deep into functions. For now, think of functions as another data type in JavaScript that
-// is good at keeping a piece of code ready to execute, and methods as object properties whose
-// value is a pointer to a function. The JavaScript language reference lists all the standard
-// methods that come with JavaScript arrays, including such important ones as `push`, `pop`,
-// `shift`, and `unshift`. These four methods provide convenient ways to add and remove elements
-// at either end of the array, one by one, causing the length to grow or shrink by one.
+// Arrays come with built-in methods. A method is an object property whose value points to a
+// function. On day 4, we go deep into functions. For now, think of functions as another data
+// type in JavaScript that is good at keeping a piece of code ready to execute, and methods as
+// object properties whose value is a pointer to a function. The JavaScript language reference
+// lists all the standard methods that come with JavaScript arrays, including such important
+// ones as `push`, `pop`, `shift`, and `unshift`. These four methods provide convenient ways
+// to add and remove elements at either end of the array, one by one, causing the length to
+// grow or shrink by one.
 
 // ACCESS VIA A VARIABLE
 // Let's create an array of mythicalAnimals called grandCouncil. This is the coloquial way of
@@ -256,7 +262,7 @@ The array store can grow or shrink. Here's some code.
 // of the array, and the array is mutated (array is changed but remains the same array, as
 // opposed to causing a new copy of the array to come into existence). If JavaScript were a
 // bit more polite and demure, its `push` methdod would return the array reference for chaining.
-// `myArray.push(2).push(4).push(6).push(8).push("Whom do we excoriate?"); // D'oh! Brendon!`
+// `myArray.push(2).push(4).push(6).push(8).push("Whom do we excoriate?"); // D'oh! Brendan!`
 // But JavaScript is beautiful just the way it is. It returns the new length, so you can...
 // you know... so you can... um, make code like this:
 // `myArray[myArray.push('Knock, knock!')] = "Who's there?";`.
