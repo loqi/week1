@@ -265,13 +265,13 @@
 // `myArray.push(2).push(4).push(6).push(8).push("Whom do we excoriate?"); // D'oh! Brendaaaan!`
 // JavaScript is beautiful just the way it is. Instead it returns the new length, so you can...
 // you know... so you can... um, make code like this to satisfy exercise #6 in a single line:
-// `myArray[myArray.push("Knock, knock!")] = "Who's there?";`.
+//          myArray[myArray.push("Knock, knock!")] = "Who's there?";
 // Or not!
 //
 // `myArray.pop()` undoes what `push` does. It shortens the array by one, removing and returning
-// the last element of its index-value store. The value is the return value, so you can do
-// this, `myVariable = myArray.pop();` or `myFunction(myArray.pop());`. If the array is empty,
-// you get `undefined` as the value, like so `console.log([].pop());`.
+// the last element of its index-value store. `pop` returns the value that was popped off, so you
+// can do this, `myVariable = myArray.pop();` or `myFunction(myArray.pop());`. If the array is
+// empty, you get `undefined` as the value, like so `console.log([].pop());`.
 
 // 8. invoke `treasureChest.pop();`. What value is returned to you? What does your array look
 //     like afterward?
