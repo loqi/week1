@@ -174,7 +174,7 @@
 
 
 
-// i. A hard-coded index number.
+// i. A direct index number.
 //    Since we happen to know the array only has something in index 0, we could just do something
 //    like `treasureChest[1] = 'friends'`; Clearly this isn't going to work well in situations
 //    where we aren't sure how many items are in the array already.
@@ -262,10 +262,10 @@
 // of the array, and the array is mutated (array is changed but remains the same array, as
 // opposed to causing a new copy of the array to come into existence). If JavaScript were a
 // bit more polite and demure, its `push` methdod would return the array reference for chaining.
-// `myArray.push(2).push(4).push(6).push(8).push("Whom do we excoriate?"); // D'oh! Brendan!`
-// But JavaScript is beautiful just the way it is. It returns the new length, so you can...
-// you know... so you can... um, make code like this:
-// `myArray[myArray.push('Knock, knock!')] = "Who's there?";`.
+// `myArray.push(2).push(4).push(6).push(8).push("Whom do we excoriate?"); // D'oh! Brendaaaan!`
+// JavaScript is beautiful just the way it is. Instead it returns the new length, so you can...
+// you know... so you can... um, make code like this to satisfy exercise #6 in a single line:
+// `myArray[myArray.push("Knock, knock!")] = "Who's there?";`.
 // Or not!
 //
 // `myArray.pop()` undoes what `push` does. It shortens the array by one, removing and returning
