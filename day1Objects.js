@@ -122,8 +122,8 @@
 //             mythicalAnimal.can fly = true;
 //      That space confuses the interepreter. It sees `can` as the property name and `fly` as
 //      some out-of-place nonsense. Trying to run that line would cause a syntax error
-//      'unexpected identifier'. The interpreter sees `mythicalAnimal.can` and dutifully up the
-//      property name 'can' in the object referred to by the mythicalAnimal variable. It sees
+//      'unexpected identifier'. The interpreter sees `mythicalAnimal.can` and dutifully looks up
+//      the property name 'can' in the object referred to by the mythicalAnimal variable. It sees
 //      there is no such key in the property list, but this is not the error. That expression
 //      just resolves to the special JS value `undefined`, the normal behavior for any object
 //      lookup on a key that doesn't exist. Some ancient versions of JS might interpret the line
