@@ -340,7 +340,7 @@
 //   where each key is a string unique among all keys of the object, and each key is
 //   paired with a single value that need not be unique. Each value can be anything that
 //   a JS variable can hold, such as a number, boolean, or reference. A reference might
-//   point to a function, an array, another object or the selfsame object.
+//   point to a function, an array, another object or even the selfsame object.
 // ARRAY
 //   A collection of values designed for ultra-fast lookup by numerical position (index)
 //   in the index-value store, where values may be anything that can be held by any JS
@@ -350,6 +350,7 @@
 //   Arrays are themselves objects. That's how it's possible for an array to find data
 //   by both index (like 0) and key (like `length`).
 
+// Congratulations!
 
 // Yesterday and today we learned how to access individual values from arrays and objects.
 // But how can you do something with each element of an array or each property of an object?
