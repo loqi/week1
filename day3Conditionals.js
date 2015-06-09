@@ -202,7 +202,7 @@
 //          }
 // The interpreter will think you want it to do this:
 //          while (someCondition) {
-//            }
+//          }
 //          {
 //            doSomething();
 //          }
